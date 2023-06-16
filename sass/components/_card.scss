@@ -1,0 +1,135 @@
+.card {
+    width: 35rem;
+    height: 58rem;
+    background-color: $dark-blue-2;
+    border-radius: 15px;
+    padding: 2.5rem;
+
+    &__image {
+        width: 30rem;
+        height: 30rem;
+        background-color: $dark-blue-3;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(../../images/icon-view.svg), linear-gradient(to right bottom, rgba($cyan, .4), rgba($cyan, .8));
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: all .5s;
+
+        }
+
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+
+    }
+
+    &__header {
+        font-size: 2.2rem;
+        font-weight: 400;
+        transition: all .5s;
+        cursor: pointer;
+
+        &:hover {
+            color: $cyan;
+        }
+    }
+
+    &__body {
+        &__description {
+            color: $soft-blue;
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+
+        &__price {
+            display: flex;
+            justify-content: space-between;
+            font-size: $default-font-size;
+            font-weight: 300;
+
+            &>p {
+                display: flex;
+                align-items: center;
+            }
+
+            img {
+                margin-right: .7rem;
+            }
+
+            &--value {
+                color: $cyan;
+            }
+
+            &--time {
+                color: $soft-blue;
+
+            }
+
+
+        }
+    }
+
+
+    &__footer {
+        border-top: 1px solid $dark-blue-3;
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        color: $soft-blue;
+
+        &__avatar {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            border: 1px solid $color-white;
+            margin-right: 1.5rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+
+        }
+
+        span {
+
+            color: $color-white;
+
+            transition: all .5s;
+            cursor: pointer;
+
+            &:hover {
+                color: $cyan;
+            }
+        }
+
+    }
+
+
+
+}

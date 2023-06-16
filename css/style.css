@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: #0d192b; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 1.5rem; }
+
+.u-margin-bottom {
+  margin-bottom: 2rem; }
+
+.card {
+  width: 35rem;
+  height: 58rem;
+  background-color: #14253d;
+  border-radius: 15px;
+  padding: 2.5rem; }
+  .card__image {
+    width: 30rem;
+    height: 30rem;
+    background-color: #2f415b;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer; }
+    .card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .card__image::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(../../images/icon-view.svg), linear-gradient(to right bottom, rgba(0, 255, 247, 0.4), rgba(0, 255, 247, 0.8));
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: all .5s; }
+    .card__image:hover::after {
+      opacity: 1; }
+  .card__header {
+    font-size: 2.2rem;
+    font-weight: 400;
+    transition: all .5s;
+    cursor: pointer; }
+    .card__header:hover {
+      color: #00fff7; }
+  .card__body__description {
+    color: #8bacda;
+    font-size: 1.8rem;
+    font-weight: 300; }
+  .card__body__price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 300; }
+    .card__body__price > p {
+      display: flex;
+      align-items: center; }
+    .card__body__price img {
+      margin-right: .7rem; }
+    .card__body__price--value {
+      color: #00fff7; }
+    .card__body__price--time {
+      color: #8bacda; }
+  .card__footer {
+    border-top: 1px solid #2f415b;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    color: #8bacda; }
+    .card__footer__avatar {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      border: 1px solid white;
+      margin-right: 1.5rem; }
+      .card__footer__avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%; }
+    .card__footer span {
+      color: white;
+      transition: all .5s;
+      cursor: pointer; }
+      .card__footer span:hover {
+        color: #00fff7; }
+
+.section-preview {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
